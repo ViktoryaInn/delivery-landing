@@ -1,6 +1,11 @@
 @import "fonts.scss";
 @import "header.scss";
+
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
-    font-family: 'ProximaNova';
+    font-family: 'ProximaNovaRegular';
 }
