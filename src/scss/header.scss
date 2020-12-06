@@ -1,5 +1,6 @@
 .header{
     height: 718px;
+    width: 100%;
     background: radial-gradient(75.49% 75.49% at 61.01% 75.77%, #376A9A 0%, #2B5276 100%);
     color: white;
 }
@@ -46,22 +47,22 @@
 }
 
 .login{
+    position: relative;
     display: flex;
 }
 
-.phone{
-    display: flex;
-}
-
-.phone img{
-    margin: 12px;
-}
-
-.phone p{
-    margin-right: 74px;
+.login__button::before{
+    width: 120px;
+    content: "8 (909) 023-12-51";
+    position: absolute;
+    right: 246px;
+    background: left/ contain no-repeat url(../img/phone.svg);
+    font-family: 'ProximaNovaLight';
+    background-size: 14px 14px;
     font-size: 13px;
     line-height: 24px;
     color: #A9C5E0;
+    text-align: right;
 }
 
 .login__button{
@@ -81,15 +82,10 @@
     .page__header{
         padding: 27px 15px 0 15px;
     }
-    .login{
-        flex-direction: column-reverse;
-    }
-    .phone{
-        width: fit-content;
-    }
-    .phone p{
-        margin-right: 0;
-        text-align: right;
+    .login__button::before{
+        width: 120px;
+        right: 0px;
+        top: 69px;
     }
     .label__title{
         width: 100%;
@@ -105,11 +101,14 @@
     }
 }
 
-@media(max-width: 375px){
+@media(max-width: 376px){
     .logo-text{
         display: none;
     }
     .phone{
+        display: none;
+    }
+    .login__button::before{
         display: none;
     }
     .label{
