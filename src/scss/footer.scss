@@ -1,0 +1,38 @@
+.footer{
+    padding: 96px 135px 87px;
+    background-color: #23415E;
+    margin-bottom: -50px;
+}
+
+.footer__wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pizda{
+    display: inline-block;
+    width: 370px;
+}
+
+.footer__list{
+    margin: 0;
+    font-family: 'ProximaNovaRegular';
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer__item{
+    font-size: 15px;
+    line-height: 36px;
+    color: #ffffff;
+    list-style-type: none;
+    flex-basis: 50%;
+}
+
+.footer__contacts{
+    font-size: 15px;
+    line-height: 19px;
+    color: #A9C5E0;
+    display: block;
+}
