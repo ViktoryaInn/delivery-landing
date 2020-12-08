@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="js/script.min.js"></script>
+    <script src="js/script.min.js" async></script>
     <title>Delivery landing</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
                 <img src="img/phone.svg" alt="phone icon">
                 <span>8 (909) 023-12-51</span>
             </div> -->
-            <button class="login__button">Вход</button>
+            <button class="login__button" id="login__btn" type="button">Вход</button>
         </div>
     </div>
     <div class="header__secondary">
@@ -45,27 +45,37 @@
         <div class="main__list">
             <div class="list__wrap">
                 <div class="main__item">
-                    <img src="img/ico1.png" alt="calculator">
+                    <div class="item__image">
+                        <img src="img/ico1.png" alt="calculator">
+                    </div>
                     <p class="item__title">Расчетать стоимость</p>
                     <p class="item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
                 </div>
                 <div class="main__item">
-                    <img src="img/ico2.png" alt="calculator">
+                    <div class="item__image">
+                        <img src="img/ico2.png" alt="calculator">
+                    </div>
                     <p class="item__title">Вызвать курьера</p>
                     <p class="item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
                 </div>
                 <div class="main__item">
-                    <img src="img/ico3.png" alt="calculator">
+                    <div class="item__image">
+                        <img src="img/ico3.png" alt="calculator">
+                    </div>
                     <p class="item__title">Оплатить услуги</p>
                     <p class="item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
                 </div>
                 <div class="main__item">
-                    <img src="img/ico4.png" alt="calculator">
+                    <div class="item__image">
+                        <img src="img/ico4.png" alt="calculator">
+                    </div>
                     <p class="item__title">Заключить договор</p>
                     <p class="item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
                 </div>
                 <div class="main__item">
-                    <img src="img/ico5.png" alt="calculator">
+                    <div class="item__image">
+                        <img src="img/ico5.png" alt="calculator">
+                    </div>
                     <p class="item__title">Предоставить данные</p>
                     <p class="item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
                 </div>
@@ -80,24 +90,40 @@
             <img src="img/icon.svg" alt="logotype">
             <img src="img/name.svg" alt="name of company">
         </div>
-        <div class="pizda">
-            <ul class="footer__list">
-            <li class="footer__item">О компании</li>
-            <li class="footer__item">Вакансии</li>
-            <li class="footer__item">Клиенту</li>
-            <li class="footer__item">Франчайзинг</li>
-            <li class="footer__item">Доставка из Китая</li>
-            <li class="footer__item">Все услуги</li>
-            <li class="footer__item">Акции</li>
-        </ul>
+        <div class="footer__list">
+            <ul class="footer__list__wrap">
+                <li class="footer__item">О компании</li>
+                <li class="footer__item">Доставка из Китая</li>
+                <li class="footer__item">Вакансии</li>
+                <li class="footer__item">Все услуги</li>
+                <li class="footer__item">Клиенту</li>
+                <li class="footer__item">Акции</li>
+                <li class="footer__item">Франчайзинг</li>
+            </ul>
         </div>
         
         <div class="footer__contacts">
             <span>manager@uexpress.ru</span></br>
-            <span>115221, г. Челябинск, </br>ул. Северная, д. 29-в</span></br>
+            <span>115221, г. Челябинск, ул. </br>Северная, д. 29-в</span></br>
             <span>Мы работаем по 24 часа </br>5 дней в неделю</span>
         </div>
     </div>
 </footer>
+    <section class="modal__window">
+    <div class="modal__wrap">
+        <button class="modal__close" id="close_btn">
+            <!-- <img src="img/close.svg" alt="close button"> -->
+        </button>
+        <div class="modal__container">
+            <h2 class="modal__title">Авторизация</h2>
+            <p class="modal__text">Введите логин и пароль, чтобы войти в личный кабинет</p>
+            <form action="" class="modal__form">
+                <input type="text" class="form__input" value="Логин">
+                <input type="text" class="form__input" value="Пароль">
+                <button class="form__btn-submit" type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+</section>
 </body>
 </html>

@@ -6,11 +6,15 @@
 
 .footer__wrap{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.pizda{
-    display: inline-block;
+.footer__list__wrap{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 370px;
 }
 
@@ -18,8 +22,9 @@
     margin: 0;
     font-family: 'ProximaNovaRegular';
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .footer__item{
@@ -34,5 +39,44 @@
     font-size: 15px;
     line-height: 19px;
     color: #A9C5E0;
-    display: block;
+    
+}
+
+.footer__contacts span{
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+@media(max-width: 768px){
+    .footer{
+        padding: 96px 15px;
+    }
+    .footer__wrap{
+        justify-content: start;
+    }
+    .footer__list{
+        margin-left: 130px;
+        margin-bottom: 96px;
+    }
+    .footer__list__wrap{
+        padding: 0;
+    }
+    .footer__contacts{
+        margin-left: 250px;
+    }
+}
+
+@media(max-width: 375px){
+    .footer__wrap{
+        flex-direction: column;
+    }
+    .footer__list__wrap{
+        width: 312px;
+    }
+    .footer__list{
+        margin: 64px 0;
+    }
+    .footer__contacts{
+        margin: 0;
+    }
 }

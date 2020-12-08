@@ -78,6 +78,12 @@
     background-color: transparent;
 }
 
+@media(max-width: 1305px){
+    .car{
+        display: none;
+    }
+}
+
 @media(max-width: 768px){
     .page__header{
         padding: 27px 15px 0 15px;
@@ -96,12 +102,9 @@
     .label__button{
         display: none;
     }
-    .car{
-        display: none;
-    }
 }
 
-@media(max-width: 376px){
+@media(max-width: 375px){
     .logo-text{
         display: none;
     }

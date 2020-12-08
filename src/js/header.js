@@ -1,4 +1,3 @@
-//alert('hello..');;
 let buttonEnter = document.getElementById('login__btn');
 let modalWindow = document.querySelector('.modal__window');
 let buttonClose = document.getElementById('close_btn');
@@ -21,4 +20,4 @@ window.addEventListener('click', (e) => {
 
 // buttonEnter.onClick = function(){
 //     console.log("something");
-// };;
+// };

@@ -1,1 +1,2 @@
-@@include('alert.js')
+@@include('alert.js');
+@@include('header.js');
