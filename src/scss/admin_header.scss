@@ -1,0 +1,57 @@
+.admin__header{
+    height: 106px;
+}
+
+.logo-text-admin{
+    display: flex;
+    align-items: center;
+}
+
+.logo-text-separator-admin{
+    margin-left: 50px;
+    margin-right: 30px;
+    height: 14px;
+    width: 0.5px;
+    background-color: #A9C5E0;
+}
+
+.logo-text-admin p{
+    margin: 0;
+    font-size: 13px;
+    line-height: 21px;
+    font-family: 'ProximaNovaLight';
+    color: #A9C5E0;
+}
+
+.admin__login{
+    position: relative;
+    display: flex;
+}
+
+.admin__login__button::before{
+    width: 120px;
+    content: "8 (909) 023-12-51";
+    position: absolute;
+    right: 246px;
+    background: left/ contain no-repeat url(../img/phone.svg);
+    font-family: 'ProximaNovaLight';
+    background-size: 14px 14px;
+    font-size: 13px;
+    line-height: 24px;
+    color: #A9C5E0;
+    text-align: right;
+}
+
+.admin__login__button{
+    width: 170px;
+    height: 52px;
+    text-align: center;
+    font-family: 'ProximaNovaSemibold';
+    font-size: 18px;
+    color: #E5E31F;
+    border: 1px solid #E5E31F;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: none;
+}
