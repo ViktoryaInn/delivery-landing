@@ -1,27 +1,3 @@
-//alert('hello..');;
-let buttonLogin = document.getElementById('login__btn');
-let modalWindow = document.querySelector('.modal__window');
-let buttonClose = document.getElementById('close_btn');
-
-buttonLogin.addEventListener('click', () => {
-    console.log("something");
-    modalWindow.classList.toggle("modal__window--active");
-});
-
-buttonClose.addEventListener('click', () => {
-    console.log("close");
-    modalWindow.classList.toggle("modal__window--active");
-});
-
-window.addEventListener('click', (e) => {
-    if(e.target == modalWindow){
-        modalWindow.classList.toggle("modal__window--active");
-    }
-});
-
-// buttonLogin.onClick = function(){
-//     console.log("something");
-// };;
 //let uploadInput = document.querySelector('.form__add__upload-img');
 
 let uploadInput = document.getElementById('upload_image_input');
@@ -77,4 +53,4 @@ image.addEventListener('load', function() {
     // if (width && height && width <= 270 && height <= 270) {
     //     displayUploadedImage();
     // }
-});;
+});

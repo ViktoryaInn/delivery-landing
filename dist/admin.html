@@ -30,19 +30,20 @@
         <h2 class="add__title">Добавить новость</h2>
         <p class="add__text">Введите текст новости, а также приложите изображение (размер: 270х270px)</p>
         <form action="" class="add__form">
-            <textarea name="" id="" cols="30" rows="10">Введите текст новости</textarea>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Введите текст новости"></textarea>
             <div class="form__add-img">
-                <input class="form__add__upload-img" type="file" accept="image/*" name="photo">
+                <input class="form__add__upload-img" id="upload_image_input" type="file" name="photo">
                 <span class="form__add__upload-img-text">+ Добавить изображение</span>
                 <div class="form__add__uploaded-img">
-                    
+                    <img class="form__add__uploaded-img-icon" src="" alt="uploaded image">
+                    <span class="form__add__uploaded-img-name"></span>
+                    <button class="form__add__uploaded-img_close-btn"alt="close image button"></button>
                 </div>
             </div>
             <button class="form__add-btn">Применить</button>
         </form>
     </div>
 </section>
-    <h1>bebebe</h1>
     <footer class="footer">
     <div class="footer__wrap">
         <div class="logo">

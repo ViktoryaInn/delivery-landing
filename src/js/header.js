@@ -1,8 +1,8 @@
-let buttonEnter = document.getElementById('login__btn');
+let buttonLogin = document.getElementById('login__btn');
 let modalWindow = document.querySelector('.modal__window');
 let buttonClose = document.getElementById('close_btn');
 
-buttonEnter.addEventListener('click', () => {
+buttonLogin.addEventListener('click', () => {
     console.log("something");
     modalWindow.classList.toggle("modal__window--active");
 });
@@ -18,6 +18,6 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// buttonEnter.onClick = function(){
+// buttonLogin.onClick = function(){
 //     console.log("something");
 // };

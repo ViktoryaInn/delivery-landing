@@ -534,6 +534,7 @@
 }
 
 .add__form textarea {
+  margin-bottom: 31px;
   padding: 22px 16px;
   width: 770px;
   height: 144px;
@@ -542,10 +543,31 @@
   border-radius: 6px;
   overflow: auto;
   font-family: 'ProximaNovaRegular';
-  color: #D0C9D6;
+  color: #000000;
   font-size: 15px;
   line-height: 20px;
   resize: none;
+  outline: none;
+}
+
+.add__form textarea::-webkit-input-placeholder {
+  color: #D0C9D6;
+}
+
+.add__form textarea::-moz-placeholder {
+  color: #D0C9D6;
+}
+
+.add__form textarea:-ms-input-placeholder {
+  color: #D0C9D6;
+}
+
+.add__form textarea::-ms-input-placeholder {
+  color: #D0C9D6;
+}
+
+.add__form textarea::placeholder {
+  color: #D0C9D6;
 }
 
 .form__add-btn {
@@ -561,6 +583,76 @@
   border: none;
   border-radius: 10px;
   outline: none;
+}
+
+.form__add-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 103px;
+}
+
+.form__add__upload-img {
+  width: 230px;
+  position: absolute;
+  opacity: 0;
+}
+
+.form__add__upload-img-text {
+  display: inline-block;
+  width: 230px;
+  height: 24px;
+  font-family: 'ProximaNovaSemibold';
+  font-size: 16px;
+  line-height: 24px;
+  color: #2A496B;
+  background: center/contain no-repeat url(../img/add_img.png);
+  background-position: left;
+  background-size: 21px 18.38px;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.form__add__uploaded-img {
+  margin-left: 64px;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form__add__uploaded-img--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__add__uploaded-img-icon {
+  margin-right: 35px;
+  width: 34px;
+  height: 34px;
+}
+
+.form__add__uploaded-img-name {
+  margin-right: 15px;
+  font-family: 'ProximaNovaRegular';
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form__add__uploaded-img_close-btn {
+  width: 18px;
+  height: 18px;
+  background: center/contain no-repeat url(../img/close.svg);
+  outline: none;
+  background-color: transparent;
+  border: none;
 }
 
 * {
