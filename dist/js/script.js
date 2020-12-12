@@ -27,7 +27,7 @@ window.addEventListener('click', (e) => {
 let uploadInput = document.getElementById('upload_image_input');
 
 let uploadedImage = {
-    container: document.querySelector('.form__add__uploaded-img'),
+    container: document.querySelector('.form__add__uploaded-img__container'),
     icon: document.querySelector('.form__add__uploaded-img-icon'),
     name: document.querySelector('.form__add__uploaded-img-name')
 };
@@ -62,7 +62,7 @@ fileReader.addEventListener('load', (e) => {
 });
 
 let displayUploadedImage = () => {
-    uploadedImage.container.classList.toggle('.form__add__uploaded-img--active');
+    uploadedImage.container.classList.toggle('form__add__uploaded-img__container--active');
     uploadedImage.icon.src = imageData.url;
     uploadedImage.name.innerHTML = imageData.fileName;
 };
