@@ -506,6 +506,7 @@
   border-radius: 10px;
   background-color: transparent;
   outline: none;
+  cursor: pointer;
 }
 
 .add__block {
@@ -642,9 +643,11 @@
   border: none;
   border-radius: 10px;
   outline: none;
+  cursor: pointer;
 }
 
 .form__add-img {
+  height: 34px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -658,6 +661,7 @@
   width: 230px;
   position: absolute;
   opacity: 0;
+  cursor: pointer;
 }
 
 .form__add__upload-img-text {
@@ -673,7 +677,6 @@
   background-size: 21px 18.38px;
   text-align: right;
   vertical-align: middle;
-  cursor: pointer;
 }
 
 .form__add__uploaded-img__container {
@@ -713,6 +716,7 @@
   outline: none;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .form__add__error {
@@ -812,6 +816,28 @@ body {
   .footer__contacts {
     margin-left: 250px;
   }
+
+  .logo-text-admin p {
+    display: none;
+    right: 234px;
+  }
+
+  .logo-text-separator-admin {
+    display: none;
+  }
+
+  .add__wrap {
+    padding: 174px 15px 140px;
+  }
+
+  .add__form textarea {
+    width: 100%;
+  }
+
+  .add__form-textarea-info {
+    width: 100%;
+    margin-bottom: 5px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -875,6 +901,7 @@ body {
   }
 
   .footer__list__wrap {
+    margin: 0;
     width: 312px;
   }
 
@@ -902,5 +929,54 @@ body {
 
   .modal__form {
     margin-top: 24px;
+  }
+
+  .admin__login__button::before {
+    display: none;
+  }
+
+  .add__wrap {
+    padding: 96px 15px 108px;
+  }
+
+  .add__title {
+    font-size: 38px;
+  }
+
+  .add__text {
+    margin-bottom: 50px;
+  }
+
+  .add__form textarea {
+    margin-bottom: 4px;
+  }
+
+  .add__form-textarea-info {
+    margin-bottom: 6px;
+  }
+
+  .form__add-img {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    margin-bottom: 96px;
+  }
+
+  .form__add__upload-img-text {
+    margin-bottom: 30px;
+  }
+
+  .form__add__uploaded-img__container {
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  .form__add__error {
+    margin: 0;
+    margin-bottom: 37px;
   }
 }

@@ -5,6 +5,7 @@ const TEXTAREA_LIMIT_ERROR = 'Превышен лимит символов';
 let textareaInput = document.querySelector('.add__textarea');
 let textareaInfo = document.querySelector('.add__form-textarea-info');
 let errorBlock = document.querySelector('.form__add__error');
+let submitButton = document.querySelector('.form__add-btn');
 
 textareaInput.onkeyup = () => {
     textareaInfo.innerHTML = 'Символов: ' + textareaInput.value.length + '/150';
@@ -13,13 +14,14 @@ textareaInput.onkeyup = () => {
         textareaInput.value.length + '</span>' + '/150';
         errorBlock.innerHTML = TEXTAREA_LIMIT_ERROR;
     }else{
-        errorBlock.innerHTML = '';
+        dropError();
     }
 };
 
 
 
 let uploadInput = document.getElementById('upload_image_input');
+let dropImage = document.querySelector('.form__add__uploaded-img_close-btn');
 
 let uploadedImage = {
     container: document.querySelector('.form__add__uploaded-img__container'),
@@ -42,7 +44,7 @@ uploadInput.addEventListener('change', () => {
     if(file.type && file.type.search("image/+(jpeg|png)") != -1){
         fileReader.readAsDataURL(file);
         imageData.fileName = file.name;
-
+        dropError();
         if(file.name.length > 20){
             imageData.fileName = imageData.filename.slice(0, 20) + "..." + file.type.match("jpeg|png");
         }
@@ -69,13 +71,34 @@ image.addEventListener('load', function() {
     let width = this.width;
     let height = this.height;
 
-    displayUploadedImage();
-
-    // if (width && height && width <= 270 && height <= 270) {
-    //     displayUploadedImage();
-    // }
+    if (width && height && width <= 270 && height <= 270) {
+        displayUploadedImage();
+        dropError();
+    }else{
+        errorBlock.innerHTML = IMAGE_FORMAT_ERROR;
+    }
 });
 
+dropImage.addEventListener('click', (e) => {
+    e.preventDefault();
+    uploadedImage.container.classList.toggle('form__add__uploaded-img__container--active');
+    uploadInput.value = null;
+    imageData.fileName = null;
+    imageData.url = null;
+});
+
+submitButton.addEventListener('click', (e) => {
+    if(textareaInput.value.length < 1){
+        e.preventDefault();
+        errorBlock.innerHTML = NULL_TEXT_ERROR;
+    }else{
+        dropError();
+    }
+});
+
+function dropError(){
+    errorBlock.innerHTML = '';
+}
 /*
 const scrollbar = document.getElementById('scroll-style');
 let content = document.querySelector('.add__textarea');

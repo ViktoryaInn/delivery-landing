@@ -54,4 +54,21 @@
     border-radius: 10px;
     background-color: transparent;
     outline: none;
+    cursor: pointer;
+}
+
+@media(max-width: 768px){
+    .logo-text-admin p{
+        display: none;
+        right: 234px;
+    }
+    .logo-text-separator-admin{
+        display: none;
+    }
+}
+
+@media(max-width: 375px){
+    .admin__login__button::before{
+        display: none;
+    }
 }
