@@ -30,8 +30,12 @@
         <h2 class="add__title">Добавить новость</h2>
         <p class="add__text">Введите текст новости, а также приложите изображение (размер: 270х270px)</p>
         <form action="" class="add__form">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Введите текст новости"></textarea>
-            <span class="add__form-textarea-info">блабла</span>
+            <div class="scroll__area" >
+                <div class="scroll__container" id="scroll-style">
+                    <textarea class="add__textarea" name=""  cols="30" rows="10" placeholder="Введите текст новости"></textarea>
+                </div>
+            </div>
+            <span class="add__form-textarea-info">Символов: 0/150</span>
             <div class="form__add-img">
                 <input class="form__add__upload-img" id="upload_image_input" type="file" name="photo">
                 <span class="form__add__upload-img-text">+ Добавить изображение</span>
@@ -40,8 +44,9 @@
                     <span class="form__add__uploaded-img-name"></span>
                     <button class="form__add__uploaded-img_close-btn"alt="close image button"></button>
                 </div>
+                <div class="form__add__error"></div>
             </div>
-            <button class="form__add-btn">Применить</button>
+            <button class="form__add-btn" type="submit">Применить</button>
         </form>
     </div>
 </section>

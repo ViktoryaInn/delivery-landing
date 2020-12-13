@@ -22,7 +22,26 @@ window.addEventListener('click', (e) => {
 // buttonLogin.onClick = function(){
 //     console.log("something");
 // };;
-//let uploadInput = document.querySelector('.form__add__upload-img');
+const NULL_TEXT_ERROR = "Введите текст новости";
+const IMAGE_FORMAT_ERROR = 'Неверный формат изображения';
+const TEXTAREA_LIMIT_ERROR = 'Превышен лимит символов';
+
+let textareaInput = document.querySelector('.add__textarea');
+let textareaInfo = document.querySelector('.add__form-textarea-info');
+let errorBlock = document.querySelector('.form__add__error');
+
+textareaInput.onkeyup = () => {
+    textareaInfo.innerHTML = 'Символов: ' + textareaInput.value.length + '/150';
+    if(textareaInput.value.length > 150){
+        textareaInfo.innerHTML = 'Символов: ' + '<span class="highlight">' + 
+        textareaInput.value.length + '</span>' + '/150';
+        errorBlock.innerHTML = TEXTAREA_LIMIT_ERROR;
+    }else{
+        errorBlock.innerHTML = '';
+    }
+};
+
+
 
 let uploadInput = document.getElementById('upload_image_input');
 
@@ -51,6 +70,8 @@ uploadInput.addEventListener('change', () => {
         if(file.name.length > 20){
             imageData.fileName = imageData.filename.slice(0, 20) + "..." + file.type.match("jpeg|png");
         }
+    }else{
+        errorBlock.innerHTML = IMAGE_FORMAT_ERROR;
     }
 });
 
@@ -77,4 +98,12 @@ image.addEventListener('load', function() {
     // if (width && height && width <= 270 && height <= 270) {
     //     displayUploadedImage();
     // }
-});;
+});
+
+/*
+const scrollbar = document.getElementById('scroll-style');
+let content = document.querySelector('.add__textarea');
+
+scrollbar.addEventListener('scroll', () => {
+    content.scrollTop();
+});*/;
