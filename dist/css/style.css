@@ -548,7 +548,7 @@
     width: 100%;
 }*/
 
-.add__form textarea {
+.add__textarea {
   position: relative;
   margin-bottom: 4px;
   padding: 22px 16px;
@@ -610,25 +610,10 @@
   color: #D0C9D6;
 }
 
-.add__form textarea::-webkit-input-placeholder {
-  color: #D0C9D6;
-}
-
-.add__form textarea::-moz-placeholder {
-  color: #D0C9D6;
-}
-
-.add__form textarea:-ms-input-placeholder {
-  color: #D0C9D6;
-}
-
-.add__form textarea::-ms-input-placeholder {
-  color: #D0C9D6;
-}
-
-.add__form textarea::placeholder {
-  color: #D0C9D6;
-}
+/*
+.add__textarea::placeholder{
+    color: #D0C9D6;
+}*/
 
 .form__add-btn {
   width: 240px;

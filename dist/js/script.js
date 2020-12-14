@@ -37,6 +37,7 @@ textareaInput.onkeyup = () => {
         textareaInfo.innerHTML = 'Символов: ' + '<span class="highlight">' + 
         textareaInput.value.length + '</span>' + '/150';
         errorBlock.innerHTML = TEXTAREA_LIMIT_ERROR;
+        //шаблонная строка
     }else{
         dropError();
     }
@@ -112,9 +113,13 @@ dropImage.addEventListener('click', (e) => {
 });
 
 submitButton.addEventListener('click', (e) => {
-    if(textareaInput.value.length < 1){
-        e.preventDefault();
-        errorBlock.innerHTML = NULL_TEXT_ERROR;
+    e.preventDefault();
+    if(textareaInput.value.length === 0){
+        textareaInput.style.color = "red";
+        console.log("why??", textareaInput.value);
+        console.log(textareaInput.value.length);
+        
+        //errorBlock.innerHTML = NULL_TEXT_ERROR;
     }else{
         dropError();
     }
