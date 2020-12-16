@@ -6,8 +6,20 @@ let textareaInput = document.querySelector('.add__textarea');
 let textareaInfo = document.querySelector('.add__form-textarea-info');
 let errorBlock = document.querySelector('.form__add__error');
 let submitButton = document.querySelector('.form__add-btn');
+let addImgBtn = document.querySelector('.form__add-img');
+
+function checkTextareaLenght(){
+    if(textareaInput.value.length != 0){
+        textareaInfo.classList.add('add__form-textarea-info--active');
+        addImgBtn.style = 'margin-top: 6px;';
+    }else{
+        textareaInfo.classList.remove('add__form-textarea-info--active');
+        addImgBtn.style = 'margin-top: 21px;';
+    }
+}
 
 textareaInput.onkeyup = () => {
+    checkTextareaLenght();
     textareaInfo.innerHTML = 'Символов: ' + textareaInput.value.length + '/150';
     if(textareaInput.value.length > 150){
         textareaInfo.innerHTML = 'Символов: ' + '<span class="highlight">' + 

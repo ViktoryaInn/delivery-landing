@@ -612,12 +612,16 @@
 
 .add__form-textarea-info {
   width: 770px;
-  display: inline-block;
+  display: none;
   font-family: 'ProximaNovaSemibold';
   font-size: 12px;
   line-height: 20px;
   text-align: right;
   color: #D0C9D6;
+}
+
+.add__form-textarea-info--active {
+  display: inline-block;
 }
 
 /*
@@ -642,6 +646,7 @@
 }
 
 .form__add-img {
+  margin-top: 21px;
   height: 34px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -649,7 +654,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 103px;
+  margin-bottom: 110px;
 }
 
 .form__add__upload-img {
@@ -675,7 +680,7 @@
 }
 
 .form__add__uploaded-img__container {
-  margin-left: 64px;
+  margin-left: 70px;
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
