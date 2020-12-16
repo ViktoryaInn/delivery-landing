@@ -1,7 +1,11 @@
 .footer{
-    padding: 96px 135px 87px;
+    padding: 89px 135px 87px;
     background-color: #23415E;
     margin-bottom: -50px;
+}
+
+.footer-logo{
+    padding-top: 7px;
 }
 
 .footer__wrap{
@@ -11,6 +15,7 @@
 }
 
 .footer__list__wrap{
+    padding-left: 24px;
     margin: 0;
     display: flex;
     flex-direction: row;
@@ -30,16 +35,21 @@
 .footer__item{
     font-size: 15px;
     line-height: 36px;
-    color: #ffffff;
+    
     list-style-type: none;
     flex-basis: 50%;
+}
+
+.footer__item-link{
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .footer__contacts{
     font-size: 15px;
     line-height: 19px;
     color: #A9C5E0;
-    
+    padding-top: 9px;
 }
 
 .footer__contacts span{
