@@ -13,7 +13,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+/*
 .footer__list__wrap{
     padding-left: 24px;
     margin: 0;
@@ -21,26 +21,32 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 370px;
-}
+}*/
 
 .footer__list{
     margin: 0;
     font-family: 'ProximaNovaRegular';
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 170px 170px;
+    grid-auto-rows: 36px;
+    gap: 0 30px;
+    //display: flex;
+    //flex-direction: row;
+    //flex-wrap: wrap;
+    //justify-content: space-between;
 }
-
+/*
 .footer__item{
-    font-size: 15px;
-    line-height: 36px;
+    
     
     list-style-type: none;
     flex-basis: 50%;
-}
+}*/
 
 .footer__item-link{
+    padding-left: 25px;
+    font-size: 15px;
+    line-height: 36px;
     color: #ffffff;
     text-decoration: none;
 }
