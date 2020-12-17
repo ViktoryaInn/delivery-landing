@@ -95,19 +95,23 @@
 }
 
 @media(max-width: 768px){
+    .logo-text p{
+        padding-top: 2px;
+    }
     .page__header{
         padding: 27px 15px 0 15px;
     }
     .login__button::before{
         width: 120px;
         right: 0px;
-        top: 69px;
+        top: 83px;
+        background-position-x: 0px;
     }
     .label__title{
-        width: 100%;
+        width: 90%;
     }
     .label__text{
-        width: 100%;
+        width: 70%;
     }
     .label__button{
         display: none;

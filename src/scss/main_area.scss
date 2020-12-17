@@ -82,17 +82,25 @@
 @media(max-width: 768px){
     .container{
         padding: 96px 15px;
+        //margin: 0 6px;
     }
     .list__wrap{
-        margin: 0 -12px;
+        margin: 0;
+        margin-top: 1px;
+        justify-content: space-between;
     }
     .main__item{
         width: 360px;
-        padding: 0 12px;
-        flex-basis: 50%;
+        padding: 0;
+        margin: 0 12px 119px;
+        flex-basis: 46%;
+    }
+    .main__item:nth-last-child(2),
+    .main__item:nth-last-child(3){
+        margin-bottom: 96px;
     }
     .main__item:last-child{
-        margin-bottom: 0;
+        margin: 0 auto;
     }
     .item__text{
         width: 100%;

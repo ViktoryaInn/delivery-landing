@@ -65,14 +65,17 @@
 
 @media(max-width: 768px){
     .footer{
-        padding: 96px 15px;
+        padding: 91px 15px 96px;
+    }
+    .footer-logo{
+        padding-top: 6px;
     }
     .footer__wrap{
         justify-content: start;
     }
     .footer__list{
-        margin-left: 130px;
-        margin-bottom: 96px;
+        margin-left: 105px;
+        margin-bottom: 87px;
     }
     .footer__list__wrap{
         padding: 0;
