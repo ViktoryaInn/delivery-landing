@@ -94,7 +94,12 @@
         width: 312px;
     }
     .footer__list{
-        margin: 64px 0;
+        margin: 70px 0 55px;
+        grid-template-columns: 142px 142px;
+        gap: 0;
+    }
+    .footer__item-link{
+        padding: 0;
     }
     .footer__contacts{
         margin: 0;

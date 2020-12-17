@@ -128,17 +128,22 @@
     .login__button::before{
         display: none;
     }
+    .header__secondary{
+        margin: 0;
+    }
     .label{
         margin: 0 auto;
     }
     .label__title{
+        margin: 148px 0 37px;
         width: 100%;
         font-size: 38px;
         line-height: 46px;
     }
     .label__text{
+        margin-bottom: 63px;
         width: 100%;
-        font-size: 16px;
+        font-size: 16.23px;
         line-height: 24px;
     }
     .label__button{
