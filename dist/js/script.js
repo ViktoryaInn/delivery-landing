@@ -1,4 +1,55 @@
-//alert('hello..');;
+//alert('hello..');
+
+const INPUT_LOGIN_ERROR = "Введите действительный электронный адрес";
+const INPUT_PASSWORD_ERROR = "Введите пароль";
+
+let inputLogin = document.getElementById('modal-input-login');
+let inputPassword = document.getElementById('modal-input-password');
+let modalSubmitBtn = document.getElementById('modal-submit-button');
+let loginError = document.getElementById('input-error-login');
+let passwordError = document.getElementById('input-error-password');
+
+function validateLogin(login){
+    let re = /\S+@\S+\.\S+/;
+    return re.test(login);
+}
+
+function validatePassword(password){
+    let re = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}/;
+    return re.test(password);
+}
+
+function enableError(element, blockError, error){
+    blockError.innerHTML = error;
+    element.classList.add('input-highlight');
+    modalSubmitBtn.classList.add('submit-disabled');
+    modalSubmitBtn.disabled = true;
+    console.log('pidoras');
+}
+
+function disableError(element, blockError){
+    blockError.innerHTML = '';
+    element.classList.remove('input-highlight');
+    modalSubmitBtn.classList.remove('submit-disabled');
+    modalSubmitBtn.disabled = false;
+    console.log('none-pidoras');
+}
+
+inputLogin.addEventListener('blur', () => {
+    if(validateLogin(inputLogin.value) && inputLogin.value.length > 0){
+        disableError(inputLogin, loginError);
+    }else{
+        enableError(inputLogin, loginError, INPUT_LOGIN_ERROR);
+    }
+});
+
+inputPassword.addEventListener('blur', () => {
+    if(validatePassword(inputPassword.value) && inputPassword.value.length > 0){
+        disableError(inputPassword, passwordError);
+    }else{
+        enableError(inputPassword, passwordError, INPUT_PASSWORD_ERROR);
+    }
+});;
 let buttonLogin = document.getElementById('login__btn');
 let modalWindow = document.querySelector('.modal__window');
 let buttonClose = document.getElementById('close_btn');
@@ -44,21 +95,18 @@ function checkTextareaLenght(){
 
 textareaInput.onkeyup = () => {
     checkTextareaLenght();
-    textareaInfo.innerHTML = 'Символов: ' + textareaInput.value.length + '/150';
+    textareaInfo.innerHTML = `Символов: ${textareaInput.value.length}/150`
     if(textareaInput.value.length > 150){
-        textareaInfo.innerHTML = 'Символов: ' + '<span class="highlight">' + 
-        textareaInput.value.length + '</span>' + '/150';
+        textareaInfo.innerHTML = `Символов: <span class="highlight">${textareaInput.value.length}</span>/150`;
         errorBlock.innerHTML = TEXTAREA_LIMIT_ERROR;
-        //шаблонная строка
     }else{
         dropError();
     }
 };
 
-
-
 let uploadInput = document.getElementById('upload_image_input');
 let dropImage = document.querySelector('.form__add__uploaded-img_close-btn');
+let addForm = document.querySelector('.add__form');
 
 let uploadedImage = {
     container: document.querySelector('.form__add__uploaded-img__container'),
@@ -113,33 +161,36 @@ image.addEventListener('load', function() {
         dropError();
     }else{
         errorBlock.innerHTML = IMAGE_FORMAT_ERROR;
+        removeImage();
     }
 });
 
 dropImage.addEventListener('click', (e) => {
     e.preventDefault();
     uploadedImage.container.classList.toggle('form__add__uploaded-img__container--active');
-    uploadInput.value = null;
-    imageData.fileName = null;
-    imageData.url = null;
+    removeImage(); 
 });
 
 submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     if(textareaInput.value.length === 0){
-        textareaInput.style.color = "red";
-        console.log("why??", textareaInput.value);
-        console.log(textareaInput.value.length);
-        
-        //errorBlock.innerHTML = NULL_TEXT_ERROR;
+        errorBlock.innerHTML = NULL_TEXT_ERROR;
     }else{
         dropError();
+        addForm.submit();
     }
 });
+
+function removeImage(){
+    uploadInput.value = null;
+    imageData.fileName = null;
+    imageData.url = null;
+}
 
 function dropError(){
     errorBlock.innerHTML = '';
 }
+
 /*
 const scrollbar = document.getElementById('scroll-style');
 let content = document.querySelector('.add__textarea');

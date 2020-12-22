@@ -112,9 +112,11 @@
             <h2 class="modal__title">Авторизация</h2>
             <p class="modal__text">Введите логин и пароль, чтобы войти в личный кабинет</p>
             <form action="" class="modal__form">
-                <input type="text" class="form__input" value="Логин">
-                <input type="text" class="form__input" value="Пароль">
-                <button class="form__btn-submit" type="submit">Войти</button>
+                <input type="text" class="form__input" placeholder="Логин" id="modal-input-login">
+                <div class="form__input-error" id="input-error-login"></div>
+                <input type="text" class="form__input" placeholder="Пароль" id="modal-input-password">
+                <div class="form__input-error" id="input-error-password"></div>
+                <button class="form__btn-submit" type="submit" id="modal-submit-button">Войти</button>
             </form>
         </div>
     </div>

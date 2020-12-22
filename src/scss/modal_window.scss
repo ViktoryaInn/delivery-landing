@@ -37,6 +37,7 @@
     outline: none;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .modal__title{
@@ -69,7 +70,12 @@
     font-family: 'ProximaNovaRegular';
     font-size: 15px;
     line-height: 20px;
-    color: #D0C9D6;
+    color: #000000;
+    outline: none;
+}
+
+.input-highlight{
+    border-color: #FF2323;
 }
 
 .form__btn-submit{
@@ -83,6 +89,20 @@
     line-height: 22px;
     color: #2A4F71;
     outline: none;
+    cursor: pointer;
+}
+
+.form__input-error{
+    margin-bottom: 16px;
+    font-family: 'ProximaNovaRegular';
+    font-size: 15px;
+    line-height: 20px;
+    color: #FF2323;
+}
+
+.submit-disabled{
+    background-color: #cbd2d8;
+    color: #FFFFFF;
 }
 
 @media(max-width: 376px){

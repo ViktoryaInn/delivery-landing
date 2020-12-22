@@ -20,21 +20,18 @@ function checkTextareaLenght(){
 
 textareaInput.onkeyup = () => {
     checkTextareaLenght();
-    textareaInfo.innerHTML = 'Символов: ' + textareaInput.value.length + '/150';
+    textareaInfo.innerHTML = `Символов: ${textareaInput.value.length}/150`
     if(textareaInput.value.length > 150){
-        textareaInfo.innerHTML = 'Символов: ' + '<span class="highlight">' + 
-        textareaInput.value.length + '</span>' + '/150';
+        textareaInfo.innerHTML = `Символов: <span class="highlight">${textareaInput.value.length}</span>/150`;
         errorBlock.innerHTML = TEXTAREA_LIMIT_ERROR;
-        //шаблонная строка
     }else{
         dropError();
     }
 };
 
-
-
 let uploadInput = document.getElementById('upload_image_input');
 let dropImage = document.querySelector('.form__add__uploaded-img_close-btn');
+let addForm = document.querySelector('.add__form');
 
 let uploadedImage = {
     container: document.querySelector('.form__add__uploaded-img__container'),
@@ -89,33 +86,36 @@ image.addEventListener('load', function() {
         dropError();
     }else{
         errorBlock.innerHTML = IMAGE_FORMAT_ERROR;
+        removeImage();
     }
 });
 
 dropImage.addEventListener('click', (e) => {
     e.preventDefault();
     uploadedImage.container.classList.toggle('form__add__uploaded-img__container--active');
-    uploadInput.value = null;
-    imageData.fileName = null;
-    imageData.url = null;
+    removeImage(); 
 });
 
 submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     if(textareaInput.value.length === 0){
-        textareaInput.style.color = "red";
-        console.log("why??", textareaInput.value);
-        console.log(textareaInput.value.length);
-        
-        //errorBlock.innerHTML = NULL_TEXT_ERROR;
+        errorBlock.innerHTML = NULL_TEXT_ERROR;
     }else{
         dropError();
+        addForm.submit();
     }
 });
+
+function removeImage(){
+    uploadInput.value = null;
+    imageData.fileName = null;
+    imageData.url = null;
+}
 
 function dropError(){
     errorBlock.innerHTML = '';
 }
+
 /*
 const scrollbar = document.getElementById('scroll-style');
 let content = document.querySelector('.add__textarea');

@@ -104,10 +104,10 @@
 .add__form-textarea-info--active{
     display: inline-block;
 }
-/*
+
 .add__textarea::placeholder{
     color: #D0C9D6;
-}*/
+}
 
 .form__add-btn{
     width: 240px;
@@ -217,10 +217,11 @@
 
 @media(max-width: 376px){
     .add__wrap{
-        padding: 96px 15px 108px;
+        padding: 96px 15px 106px;
     }
     .add__title{
-        font-size: 38px;
+        font-size: 32px;
+        line-height: 46px;
     }
     .add__text{
         margin-bottom: 50px;
@@ -234,9 +235,10 @@
     .form__add-img{
         flex-direction: column;
         align-items: start;
-        margin-bottom: 96px;
+        margin: 22px 0 87px;
     }
     .form__add__upload-img-text{
+        width: 229px;
         margin-bottom: 30px;
     }
     .form__add__uploaded-img__container{

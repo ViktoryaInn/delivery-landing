@@ -401,6 +401,7 @@
   outline: none;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .modal__title {
@@ -438,7 +439,12 @@
   font-family: 'ProximaNovaRegular';
   font-size: 15px;
   line-height: 20px;
-  color: #D0C9D6;
+  color: #000000;
+  outline: none;
+}
+
+.input-highlight {
+  border-color: #FF2323;
 }
 
 .form__btn-submit {
@@ -452,6 +458,20 @@
   line-height: 22px;
   color: #2A4F71;
   outline: none;
+  cursor: pointer;
+}
+
+.form__input-error {
+  margin-bottom: 16px;
+  font-family: 'ProximaNovaRegular';
+  font-size: 15px;
+  line-height: 20px;
+  color: #FF2323;
+}
+
+.submit-disabled {
+  background-color: #cbd2d8;
+  color: #FFFFFF;
 }
 
 .admin__header {
@@ -624,10 +644,25 @@
   display: inline-block;
 }
 
-/*
-.add__textarea::placeholder{
-    color: #D0C9D6;
-}*/
+.add__textarea::-webkit-input-placeholder {
+  color: #D0C9D6;
+}
+
+.add__textarea::-moz-placeholder {
+  color: #D0C9D6;
+}
+
+.add__textarea:-ms-input-placeholder {
+  color: #D0C9D6;
+}
+
+.add__textarea::-ms-input-placeholder {
+  color: #D0C9D6;
+}
+
+.add__textarea::placeholder {
+  color: #D0C9D6;
+}
 
 .form__add-btn {
   width: 240px;
@@ -988,11 +1023,12 @@ body {
   }
 
   .add__wrap {
-    padding: 96px 15px 108px;
+    padding: 96px 15px 106px;
   }
 
   .add__title {
-    font-size: 38px;
+    font-size: 32px;
+    line-height: 46px;
   }
 
   .add__text {
@@ -1015,10 +1051,11 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
-    margin-bottom: 96px;
+    margin: 22px 0 87px;
   }
 
   .form__add__upload-img-text {
+    width: 229px;
     margin-bottom: 30px;
   }
 
