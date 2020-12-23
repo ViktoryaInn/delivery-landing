@@ -89,7 +89,7 @@
 }
 
 @media(max-width: 1305px){
-    .car{
+    .slide-image{
         display: none;
     }
 }
@@ -151,11 +151,39 @@
         display: block;
     }
 }
-
+/*
 .header__secondary{
     margin-top: 27px;
     display: flex;
     justify-content: space-between;
+}*/
+
+.slider{
+    position: relative;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider__wrapper{
+    position: relative;
+}
+
+.slider__items{
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slider__item{ /*add this*/
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    &-wrap{
+        margin-top: 27px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
 }
 
 .label__title{
@@ -189,7 +217,7 @@
     outline: none;
 }
 
-.car{
+.slide-image{
     vertical-align: bottom;
     padding-left: 10px;
 }
