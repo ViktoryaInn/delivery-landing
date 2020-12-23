@@ -5,11 +5,8 @@
     color: white;
 }
 
-.page__header{
-    padding: 27px 135px 0;
-}
-
 .header__primary{
+    padding: 27px 135px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,11 +92,17 @@
 }
 
 @media(max-width: 768px){
+    .header__primary{
+        padding: 27px 15px 0;
+    }
+    .slider__item{
+        height: 612px;
+    }
+    .slider__item-wrap{
+        padding: 0 15px;
+    }
     .logo-text p{
         padding-top: 2px;
-    }
-    .page__header{
-        padding: 27px 15px 0 15px;
     }
     .login__button::before{
         width: 120px;
@@ -151,16 +154,15 @@
         display: block;
     }
 }
-/*
+
 .header__secondary{
-    margin-top: 27px;
-    display: flex;
-    justify-content: space-between;
-}*/
+    padding-top: 27px;
+}
 
 .slider{
     position: relative;
-    max-width: 1200px;
+    max-width: 1400px;
+    overflow: hidden;
     margin-left: auto;
     margin-right: auto;
 }
@@ -179,9 +181,9 @@
     max-width: 100%;
 
     &-wrap{
-        margin-top: 27px;
         display: flex;
         justify-content: space-between;
+        padding-left: 135px;
     }
     
 }
@@ -220,4 +222,36 @@
 .slide-image{
     vertical-align: bottom;
     padding-left: 10px;
+}
+
+#slider-image-s1{
+    margin-right: 135px;
+}
+
+.slider__indicators {
+    position: absolute;
+    right: 0;
+    bottom: 32px;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin: 0 15%;
+    list-style: none;
+}
+
+.slider__indicators li{
+    box-sizing: content-box;
+    width: 14px;
+    height: 14px;
+    margin: 0 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    border: none;
+    background: center/ contain no-repeat url(../img/indicator.svg);
+}
+
+.slider__indicators li.active{
+    background: center/ contain no-repeat url(../img/indicator-active.svg);
 }
