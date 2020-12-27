@@ -1,53 +1,22 @@
-let buttonLogin = document.getElementById('login__btn');
-let modalWindow = document.querySelector('.modal__window');
-let buttonClose = document.getElementById('close_btn');
+// let buttonLogin = document.getElementById('login__btn');
+// let modalWindow = document.querySelector('.modal__window');
+// let buttonClose = document.getElementById('close_btn');
 
-buttonLogin.addEventListener('click', () => {
-    console.log("something");
-    modalWindow.classList.toggle("modal__window--active");
-});
+// buttonLogin.addEventListener('click', () => {
+//     console.log("something");
+//     modalWindow.classList.toggle("modal__window--active");
+// });
 
-buttonClose.addEventListener('click', () => {
-    console.log("close");
-    modalWindow.classList.toggle("modal__window--active");
-});
+// buttonClose.addEventListener('click', () => {
+//     console.log("close");
+//     modalWindow.classList.toggle("modal__window--active");
+// });
 
-window.addEventListener('click', (e) => {
-    if(e.target == modalWindow){
-        modalWindow.classList.toggle("modal__window--active");
-    }
-});
-/*
-let slides = document.querySelectorAll('div.slider__item');
-console.log(slides.length);
-
-let currentSlide = 0;
-let timerID;
-
-window.onload = function(){
-    showSlide(currentSlide);
-    timerID = setInterval(() => showNextSlide(), 5000);
-}
-
-function showNextSlide(){
-    console.log("next");
-    if(currentSlide == slides.length - 1){
-        showSlide(0);
-    }else{
-        showSlide(currentSlide + 1);
-    }
-}
-
-function showSlide(index){
-    currentSlide = index;
-    for(let i = 0; i < slides.length; i++){
-        if(i != currentSlide){
-            slides[i].style = "display: none;"
-        }else{
-            slides[i].style = "display: flex;"
-        }
-    }
-}*/
+// window.addEventListener('click', (e) => {
+//     if(e.target == modalWindow){
+//         modalWindow.classList.toggle("modal__window--active");
+//     }
+// });
 
 let slider = document.querySelector('.slider');
 let sliderContainer = document.querySelector('.slider__items');
