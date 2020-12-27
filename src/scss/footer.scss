@@ -65,23 +65,28 @@
     }
 }
 
-@media(max-width: 376px){
+@media(max-width:630px){
     .footer__wrap{
         flex-direction: column;
     }
+    .footer__list{
+        margin: 70px 0 55px;
+    }
+    .footer__contacts{
+        margin: 0;
+    }
+    .footer__item-link{
+        padding-left: 0;
+    }
+}
+
+@media(max-width: 376px){
     .footer__list__wrap{
         margin: 0;
         width: 312px;
     }
     .footer__list{
-        margin: 70px 0 55px;
         grid-template-columns: 142px 142px;
         gap: 0;
-    }
-    .footer__item-link{
-        padding: 0;
-    }
-    .footer__contacts{
-        margin: 0;
     }
 }

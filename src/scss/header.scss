@@ -258,3 +258,9 @@
 .slider__indicators li.active{
     background: center/ contain no-repeat url(../img/indicator-active.svg);
 }
+
+@media(max-width: 600px){
+    .logo-text{
+        display: none;
+    }
+}

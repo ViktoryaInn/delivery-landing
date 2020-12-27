@@ -87,6 +87,15 @@
     }
 }
 
+@media(max-width:630px){
+    .list__wrap{
+        justify-content: center;
+    }
+    .main__item:last-child{
+        margin: 0 12px 0;
+    }
+}
+
 @media(max-width: 376px){
     .main__title{
         margin-bottom: 146px;
