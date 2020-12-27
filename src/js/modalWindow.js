@@ -1,5 +1,6 @@
 let buttonLogin = document.getElementById('login__btn');
 let modalWindow = document.querySelector('.modal__window');
+let modalWrap = document.querySelector('.modal__wrap');
 let buttonClose = document.getElementById('close_btn');
 
 buttonLogin.addEventListener('click', () => {
@@ -11,7 +12,7 @@ buttonClose.addEventListener('click', () => {
 });
 
 window.addEventListener('click', (e) => {
-    if(e.target == modalWindow){
+    if(e.target == modalWindow && e.target != modalWrap){
         modalWindow.classList.toggle("modal__window--active");
     }
 });

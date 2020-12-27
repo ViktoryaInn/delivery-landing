@@ -17,7 +17,6 @@ for(let i = 0; i < sliderItems.length; i++){
 
 let position = {
   getItemIndex: function(mode) {
-    console.log("get item index");
     let index = 0;
     for(let i = 0; i < itemsArray.length; i++){
       if((itemsArray[i].position < itemsArray[index].position && mode === 'min') || (itemsArray[i].position > itemsArray[index].position && mode === 'max')){
@@ -27,7 +26,6 @@ let position = {
     return index;
   },
   getItemPosition: function(mode){
-    console.log("get item position");
     return itemsArray[position.getItemIndex(mode)].position;
   }
 };
@@ -84,7 +82,6 @@ function moveSlide(direction){
   
   function startAutoPlay(){
     stopAutoPlay();
-    console.log("start auto play");
     timerId = setInterval(() => moveSlide(defaultDirection), delayAutoPlay);
   }
   

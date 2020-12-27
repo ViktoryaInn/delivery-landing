@@ -224,6 +224,10 @@
   margin-right: 135px;
 }
 
+#slider-image-s2 {
+  overflow-x: hidden;
+}
+
 .slider__indicators {
   position: absolute;
   right: 0;

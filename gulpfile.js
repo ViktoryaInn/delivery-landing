@@ -14,14 +14,14 @@ let path = {
         html: [sourceFolder + "/*.html", "!" + sourceFolder + "/_*.html"],
         css: sourceFolder + "/scss/style.scss",
         js: [sourceFolder + "/js/script.js", sourceFolder + "/js/admin.js"],
-        img: sourceFolder + "/img/**/*.{jpg,png,svg,webp}",
+        img: sourceFolder + "/img/*.{jpg,png,svg,webp}",
         fonts: sourceFolder + "/fonts/*.ttf",
     }, //папка с исходниками
     watch:{
         html: sourceFolder + "/**/*.html",
         css: sourceFolder + "/scss/**/*.scss",
         js: sourceFolder + "/js/**/*.js",
-        img: sourceFolder + "/img/**/*.{jpg,png,svg,webp}",
+        img: sourceFolder + "/img/*.{jpg,png,svg,webp}",
     }, //объект содержащий пути к файлам которые нужно слушать постоянно
     clean:"./" + projectFolder + "/" //объект отвечающий за удаление этой папки при каждом запуске gulp
 };

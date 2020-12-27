@@ -1,5 +1,6 @@
 let buttonLogin = document.getElementById('login__btn');
 let modalWindow = document.querySelector('.modal__window');
+let modalWrap = document.querySelector('.modal__wrap');
 let buttonClose = document.getElementById('close_btn');
 
 buttonLogin.addEventListener('click', () => {
@@ -11,7 +12,7 @@ buttonClose.addEventListener('click', () => {
 });
 
 window.addEventListener('click', (e) => {
-    if(e.target == modalWindow){
+    if(e.target == modalWindow && e.target != modalWrap){
         modalWindow.classList.toggle("modal__window--active");
     }
 });
@@ -83,7 +84,6 @@ for(let i = 0; i < sliderItems.length; i++){
 
 let position = {
   getItemIndex: function(mode) {
-    console.log("get item index");
     let index = 0;
     for(let i = 0; i < itemsArray.length; i++){
       if((itemsArray[i].position < itemsArray[index].position && mode === 'min') || (itemsArray[i].position > itemsArray[index].position && mode === 'max')){
@@ -93,7 +93,6 @@ let position = {
     return index;
   },
   getItemPosition: function(mode){
-    console.log("get item position");
     return itemsArray[position.getItemIndex(mode)].position;
   }
 };
@@ -150,7 +149,6 @@ function moveSlide(direction){
   
   function startAutoPlay(){
     stopAutoPlay();
-    console.log("start auto play");
     timerId = setInterval(() => moveSlide(defaultDirection), delayAutoPlay);
   }
   
