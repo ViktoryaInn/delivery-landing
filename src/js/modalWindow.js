@@ -3,12 +3,10 @@ let modalWindow = document.querySelector('.modal__window');
 let buttonClose = document.getElementById('close_btn');
 
 buttonLogin.addEventListener('click', () => {
-    console.log("something");
     modalWindow.classList.toggle("modal__window--active");
 });
 
 buttonClose.addEventListener('click', () => {
-    console.log("close");
     modalWindow.classList.toggle("modal__window--active");
 });
 
@@ -42,7 +40,6 @@ function enableError(element, blockError, error){
     element.classList.add('input-highlight');
     modalSubmitBtn.classList.add('submit-disabled');
     modalSubmitBtn.disabled = true;
-    console.log('pidoras');
 }
 
 function disableError(element, blockError){
@@ -50,7 +47,6 @@ function disableError(element, blockError){
     element.classList.remove('input-highlight');
     modalSubmitBtn.classList.remove('submit-disabled');
     modalSubmitBtn.disabled = false;
-    console.log('none-pidoras');
 }
 
 inputLogin.addEventListener('blur', () => {

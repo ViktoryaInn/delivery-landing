@@ -22,13 +22,6 @@
     height: 16px;
 }
 
-/*
-.title{
-    display: flex;
-    align-items: center;
-    text-align: center;
-}*/
-
 .logo-link{
     text-decoration: none;
 }
@@ -98,7 +91,7 @@
 
 @media(max-width: 768px){
     .header__primary{
-        padding: 27px 15px 0;
+        padding: 27px 0 0;
     }
     .slider__item{
         height: 612px;

@@ -48,7 +48,6 @@ let imageData = {
 };
 
 uploadInput.addEventListener('change', () => {
-    console.log("change");
     let file = uploadInput.files[0];
 
     if(file.type && file.type.search("image/+(jpeg|png)") != -1){
@@ -64,7 +63,6 @@ uploadInput.addEventListener('change', () => {
 });
 
 fileReader.addEventListener('load', (e) => {
-    console.log("load1");
     let url = e.target.result;
     image.src = url;
     imageData.url = url;
@@ -77,7 +75,6 @@ let displayUploadedImage = () => {
 };
 
 image.addEventListener('load', function() {
-    console.log("load2");
     let width = this.width;
     let height = this.height;
 
@@ -97,7 +94,6 @@ dropImage.addEventListener('click', (e) => {
 });
 
 submitButton.addEventListener('click', (e) => {
-    e.preventDefault();
     if(textareaInput.value.length === 0){
         errorBlock.innerHTML = NULL_TEXT_ERROR;
     }else{

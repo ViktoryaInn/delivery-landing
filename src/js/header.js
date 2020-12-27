@@ -1,28 +1,6 @@
-// let buttonLogin = document.getElementById('login__btn');
-// let modalWindow = document.querySelector('.modal__window');
-// let buttonClose = document.getElementById('close_btn');
-
-// buttonLogin.addEventListener('click', () => {
-//     console.log("something");
-//     modalWindow.classList.toggle("modal__window--active");
-// });
-
-// buttonClose.addEventListener('click', () => {
-//     console.log("close");
-//     modalWindow.classList.toggle("modal__window--active");
-// });
-
-// window.addEventListener('click', (e) => {
-//     if(e.target == modalWindow){
-//         modalWindow.classList.toggle("modal__window--active");
-//     }
-// });
-
 let slider = document.querySelector('.slider');
 let sliderContainer = document.querySelector('.slider__items');
 let sliderItems = document.querySelectorAll('div.slider__item');
-
-console.log(sliderItems.length);
 
 let indicatorIndex = 0;
 let indicatorIndexMax = sliderItems.length - 1;
@@ -36,8 +14,6 @@ let itemsArray = [];
 for(let i = 0; i < sliderItems.length; i++){
   itemsArray.push({item: sliderItems[i], position: i, transform: 0});
 }
-
-console.log(itemsArray);
 
 let position = {
   getItemIndex: function(mode) {
@@ -57,7 +33,6 @@ let position = {
 };
 
 function moveSlide(direction){
-    console.log("move slide");
     let nextItem;
     let currentIndicator = indicatorIndex;
     if(direction === 'next'){
@@ -70,7 +45,7 @@ function moveSlide(direction){
       }
   
       transformValue -= transformStep;
-      indicatorIndex = indicatorIndex + 1; //
+      indicatorIndex++; 
       if(indicatorIndex > indicatorIndexMax){
         indicatorIndex = 0;
       }
@@ -84,7 +59,7 @@ function moveSlide(direction){
       }
   
       transformValue += transformStep;
-      indicatorIndex--; //
+      indicatorIndex--;
       if(indicatorIndex < 0) {
         indicatorIndex = indicatorIndexMax;
       }

@@ -3,12 +3,10 @@ let modalWindow = document.querySelector('.modal__window');
 let buttonClose = document.getElementById('close_btn');
 
 buttonLogin.addEventListener('click', () => {
-    console.log("something");
     modalWindow.classList.toggle("modal__window--active");
 });
 
 buttonClose.addEventListener('click', () => {
-    console.log("close");
     modalWindow.classList.toggle("modal__window--active");
 });
 
@@ -42,7 +40,6 @@ function enableError(element, blockError, error){
     element.classList.add('input-highlight');
     modalSubmitBtn.classList.add('submit-disabled');
     modalSubmitBtn.disabled = true;
-    console.log('pidoras');
 }
 
 function disableError(element, blockError){
@@ -50,7 +47,6 @@ function disableError(element, blockError){
     element.classList.remove('input-highlight');
     modalSubmitBtn.classList.remove('submit-disabled');
     modalSubmitBtn.disabled = false;
-    console.log('none-pidoras');
 }
 
 inputLogin.addEventListener('blur', () => {
@@ -118,7 +114,6 @@ let imageData = {
 };
 
 uploadInput.addEventListener('change', () => {
-    console.log("change");
     let file = uploadInput.files[0];
 
     if(file.type && file.type.search("image/+(jpeg|png)") != -1){
@@ -134,7 +129,6 @@ uploadInput.addEventListener('change', () => {
 });
 
 fileReader.addEventListener('load', (e) => {
-    console.log("load1");
     let url = e.target.result;
     image.src = url;
     imageData.url = url;
@@ -147,7 +141,6 @@ let displayUploadedImage = () => {
 };
 
 image.addEventListener('load', function() {
-    console.log("load2");
     let width = this.width;
     let height = this.height;
 
@@ -167,7 +160,6 @@ dropImage.addEventListener('click', (e) => {
 });
 
 submitButton.addEventListener('click', (e) => {
-    e.preventDefault();
     if(textareaInput.value.length === 0){
         errorBlock.innerHTML = NULL_TEXT_ERROR;
     }else{
